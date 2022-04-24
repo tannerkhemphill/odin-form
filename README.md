@@ -1,1 +1,1 @@
-# odin-form
+The purpose of this project is to practice the fundamentals of designing a basic form using HTMl and CSS.
