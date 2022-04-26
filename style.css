@@ -6,10 +6,11 @@
 body {
     display: flex;
     flex-direction: row;
+    margin: 0;
 }
 
 #sidebar-container {
-    width: 40%;
+    flex: 40%;
     position: relative;
 }
 
@@ -24,8 +25,8 @@ body {
 #logo-container {
     background-color: rgba(0, 0, 0, .5);
     position: absolute;
-    top: 20vh;
-    height: 20vh;
+    top: 20%;
+    height: 15%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -60,11 +61,13 @@ body {
 }
 
 #form-container {
-    width: 60%;
+    display: flex;
+    flex: 60%;
+    flex-direction: column;
 }
 
 #top-form {
-    height: 20%;
+    flex: 1 1 auto;
     padding-top: 10%;
     padding-left: 5%;
 }
@@ -77,7 +80,9 @@ body {
 }
 
 #middle-form {
-    height: 20%;
+    flex: 1 1 auto;
+    padding-left: 5%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 #middle-form-container {
@@ -86,14 +91,93 @@ body {
     justify-content: flex-start;
 }
 
+#middle-form-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
 form {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 1vh 5vw;
+}
+
+.column {
+    flex: 50%;
+    justify-content: space-between;
 }
 
 .form-element {
+    max-width: 70%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 15px;
+}
+
+#bottom-form {
+    flex: 2 1 auto;
+    padding-left: 5%;
+    padding-top: 3%;
+}
+
+button {
+    width: 20%;
+    height: 15%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: white;
+    background-color: #596D48;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 3%;
+}
+
+button:hover {
+    background-color: #4c5d3d;
+    cursor: pointer;
+}
+
+#bottom-form-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+a {
+    color: #596D48;
+    text-decoration: none;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(91, 91, 91);
+}
+
+input {
+    border: 1px solid #E5E7EB;
+    border-radius: 3px;
+}
+
+input:focus {
+    outline: none !important;
+    border: 1px solid rgb(69, 69, 214);
+    box-shadow: 0 0 10px #719ECE;
+}
+
+.error {
+    margin-bottom: 0;
+}
+
+#error-message {
+    color: rgb(196, 55, 55);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.error > input {
+    outline: none !important;
+    border: 1px solid rgb(196, 55, 55);
 }
